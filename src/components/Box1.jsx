@@ -8,8 +8,8 @@ export default function Box1() {
 
             <div id="pg-div">
                 <div id="progress">
-                    <ProgressBar value={5} max={15} width={'25rem'} className="custom-progress-bar" />
-                    <span id="total" style={{ fontSize: '2.8rem' }}> {5} </span>
+                    <ProgressBar value={5} max={15} width={'100%'} className="custom-progress-bar" />
+                    <span id="total" style={{ fontSize: '2.6rem' }}> {5} </span>
                 </div>
             </div>
 

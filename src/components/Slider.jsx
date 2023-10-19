@@ -1,10 +1,8 @@
 import * as React from 'react';
 import PropTypes from 'prop-types';
-import Slider, { SliderThumb } from '@mui/material/Slider';
+import Slider from '@mui/material/Slider';
 import { styled } from '@mui/material/styles';
-import Typography from '@mui/material/Typography';
 import Tooltip from '@mui/material/Tooltip';
-import Box from '@mui/material/Box';
 
 function ValueLabelComponent(props) {
     const { children, value } = props;
@@ -26,6 +24,10 @@ const PrettoSlider = styled(Slider)({
     color: '#eaedf1',
     height: 80,
     width: 20,
+    padding: 0,
+    display:'flex',
+    justifyContent:'center',
+    alignItems:'center',
     '& .MuiSlider-track': {
         border: 'none',
         backgroundColor: 'transparent'
@@ -68,7 +70,7 @@ export default function CustomizedSlider() {
 
 
         <PrettoSlider
-        sx={{pointerEvents:'none'}}
+            sx={{ pointerEvents: 'none' }}
             valueLabelDisplay="auto"
             aria-label="pretto slider"
             defaultValue={48}
