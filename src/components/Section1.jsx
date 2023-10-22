@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from "react";
+import React, { useState, useEffect } from "react";
 import One from "./One";
 import Two from "./Two";
 import icons from "./Icons";
@@ -58,7 +58,7 @@ export default function Section1() {
                 click={handleClick}
                 onKeyDown={handleKeyDown}
                 submit={handleFormSubmit}
-                temp='0°'
+                temp='0'
                 location='Location Unavailable'
                 conditions='No current conditions'
                 rain='0%'
@@ -81,18 +81,6 @@ export default function Section1() {
                 sunset='0:00'
             />
         </div>
-    }
-
-    function getCurrentTime() {
-        const now = new Date();
-        const hours = now.getHours();
-        const minutes = now.getMinutes();
-        const ampm = hours >= 12 ? 'PM' : 'AM';
-
-        const formattedHours = hours % 12 || 12;
-
-        const formattedTime = `${formattedHours}:${minutes.toString().padStart(2, '0')} ${ampm}`;
-        return formattedTime;
     }
 
     const address = weatherData.resolvedAddress;
