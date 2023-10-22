@@ -1,11 +1,11 @@
 import React from "react";
 
-export default function Box3() {
+export default function Box3(props) {
     return (
         <div id="box3">
             <p id="highlights">Feels Like</p>
-            <p id="flTemp">82°</p>
-            <p id="description">Similar temperatures continuing with no rain expected.</p>
+            <p id="flTemp">{props.feels}°</p>
+            <p id="description">{props.description}</p>
         </div>
     )
 }

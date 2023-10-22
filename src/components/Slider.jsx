@@ -65,7 +65,7 @@ const PrettoSlider = styled(Slider)({
     },
 });
 
-export default function CustomizedSlider() {
+export default function CustomizedSlider(props) {
     return (
 
 
@@ -73,7 +73,8 @@ export default function CustomizedSlider() {
             sx={{ pointerEvents: 'none' }}
             valueLabelDisplay="auto"
             aria-label="pretto slider"
-            defaultValue={48}
+            defaultValue={props.humidity}
+            value={props.humidity}
             orientation="vertical"
         />
 

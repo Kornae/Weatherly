@@ -93,11 +93,11 @@ body {
 
 
     #date {
-      font-size: 1rem;
+      font-size: .85rem;
     }
 
     #place {
-      font-size: 1.5rem;
+      font-size: 1rem;
     }
 
     #country {
@@ -197,29 +197,6 @@ body {
       grid-area: c6;
     }
 
-
-
-
-    #card-content {
-      /* margin: 0px 10px;
-      padding: 5px 30px; */
-      border: none;
-      width: auto;
-      /* border-radius: 15px; */
-      box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
-    }
-
-    #day-div {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    #day {
-      grid-area: day;
-
-    }
-
     #weekly-img {
       display: flex;
       justify-content: center;
@@ -238,7 +215,6 @@ body {
       width: auto;
       height: auto;
       display: flex;
-
     }
   }
 
@@ -798,7 +774,7 @@ body {
           'place'
           'tp';
         grid-template-columns: 1fr;
-        grid-template-rows: auto auto auto;
+        grid-template-rows: auto auto auto; 
       }
 
       #m-temperature {
@@ -811,14 +787,14 @@ body {
       }
 
       #date {
-        font-size: .9rem;
+        font-size: .85rem;
         grid-area: date;
       }
 
       #place {
         margin: 0px 20px 20px;
         padding: 0px 20px 0px;
-        font-size: 1.5rem;
+        font-size: 1.1rem;
         grid-area: place;
       }
 

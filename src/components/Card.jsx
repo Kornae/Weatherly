@@ -18,7 +18,7 @@ export default function CardVariants(props) {
                     <Typography level="title-md">{props.day}</Typography>
 
                     <div id="weekly-img">
-                        <img id="icon" src="https://icons.veryicon.com/png/o/weather/weather-fill/weather-cloudy-night-1.png" alt="icon" />
+                        <img id="icon" src={props.dailyImg} alt="icon" />
                     </div>
                     <div style={{display:'flex', justifyContent:'center', alignItems:'center'}}>
                         <Typography style={{padding:'0px 5px'}}>{props.temp}</Typography>

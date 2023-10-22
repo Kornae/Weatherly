@@ -3,108 +3,71 @@ import Nav from "./Nav";
 import CardVariants from "./Card";
 import BasicTextFields from "./Search";
 
-export default function Part1() {
+export default function Part1(props) {
     return (
         <div id="part1">
-        <div id="p1-search">
-            <BasicTextFields />
+            <div id="p1-search">
+                <BasicTextFields 
+                    change={props.change}
+                    click={props.click}
+                    onKeyDown={props.onKeyDown}
+                    submit={props.submit}
+                />
             </div>
-            <div id="p1Text"><Nav /></div>
+            <div id="p1Text"><Nav 
+                trueClick={props.trueClick}
+                falseClick={props.falseClick}
+                unit={props.unit}
+            /></div>
             <div id="p1Content">
                 <div id="temp-card-1">
                     <CardVariants
-                        day='Mon'
-                        temp='82°'
-                        low='65°'
+                        day={props.day1}
+                        temp={props.temp1}
+                        low={props.low1}
+                        dailyImg={props.dailyImg1}
                     />
                 </div>
                 <div id="temp-card-2">
                     <CardVariants
-                        day='Tue'
-                        temp='83°'
-                        low='67°'
+                        day={props.day2}
+                        temp={props.temp2}
+                        low={props.low2}
+                        dailyImg={props.dailyImg2}
                     />
                 </div>
                 <div id="temp-card-3">
                     <CardVariants
-                        day='Wed'
-                        temp='87°'
-                        low='63°'
+                        day={props.day3}
+                        temp={props.temp3}
+                        low={props.low3}
+                        dailyImg={props.dailyImg3}
                     />
                 </div>
                 <div id="temp-card-4">
                     <CardVariants
-                        day='Thu'
-                        temp='79°'
-                        low='68°'
+                        day={props.day4}
+                        temp={props.temp4}
+                        low={props.low4}
+                        dailyImg={props.dailyImg4}
                     />
                 </div>
                 <div id="temp-card-5">
                     <CardVariants
-                        day='Fri'
-                        temp='78°'
-                        low='69°'
+                        day={props.day5}
+                        temp={props.temp5}
+                        low={props.low5}
+                        dailyImg={props.dailyImg5}
                     />
                 </div>
                 <div id="temp-card-6">
                     <CardVariants
-                        day='Sat'
-                        temp='81°'
-                        low='65°'
+                        day={props.day6}
+                        temp={props.temp6}
+                        low={props.low6}
+                        dailyImg={props.dailyImg6}
                     />
                 </div>
-                
-                {/* <div id='card-content' className="card">
-                   
-                        <p id='label'>Sun</p>
-                
-                    <div id="weekly-img">
-                        <img id="icon" src="https://icons.veryicon.com/png/o/weather/weather-fill/weather-cloudy-night-1.png" alt="icon" />
-                    </div>
-                    <p id='label-content'><span id="high">15°</span></p>
-                </div>
-                <div id='card-content' className="card">
-                    <p id='label'>Mon</p>
-                    <div id="weekly-img">
-                        <img id="icon" src="https://icons.veryicon.com/png/o/weather/weather-fill/weather-cloudy-night-1.png" alt="icon" />
-                    </div>
-                    <p id='label-content'><span id="high">15°</span></p>
-                </div>
-                <div id='card-content' className="card">
-                    <p id='label'>Tue</p>
-                    <div id="weekly-img">
-                        <img id="icon" src="https://icons.veryicon.com/png/o/weather/weather-fill/weather-cloudy-night-1.png" alt="icon" />
-                    </div>
-                    <p id='label-content'><span id="high">15°</span></p>
-                </div>
-                <div id='card-content' className="card">
-                    <p id='label'>Wed</p>
-                    <div id="weekly-img">
-                        <img id="icon" src="https://icons.veryicon.com/png/o/weather/weather-fill/weather-cloudy-night-1.png" alt="icon" />
-                    </div>
-                    <p id='label-content'><span id="high">15°</span></p>
-                </div>
-                <div id='card-content' className="card">
-                    <p id='label'>Thu</p>
-                    <div id="weekly-img">
-                        <img id="icon" src="https://icons.veryicon.com/png/o/weather/weather-fill/weather-cloudy-night-1.png" alt="icon" />
-                    </div>
-                    <p id='label-content'><span id="high">15°</span></p>
-                </div>
-                <div id='card-content' className="card">
-                    <p id='label'>Fri</p>
-                    <div id="weekly-img">
-                        <img id="icon" src="https://icons.veryicon.com/png/o/weather/weather-fill/weather-cloudy-night-1.png" alt="icon" />
-                    </div>
-                    <p id='label-content'><span id="high">15°</span></p>
-                </div>
-                <div id='card-content' className="card">
-                    <p id='label'>Sat</p>
-                    <div id="weekly-img">
-                        <img id="icon" src="https://icons.veryicon.com/png/o/weather/weather-fill/weather-cloudy-night-1.png" alt="icon" />
-                    </div>
-                    <p id='label-content'><span id="high">15°</span></p>
-                </div> */}
             </div>
 
         </div>

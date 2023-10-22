@@ -7,17 +7,36 @@ import Box5 from "./Box5";
 import Box6 from "./Box6";
 import Nav2 from "./Nav2";
 
-export default function Part2() {
-    return(
+export default function Part2(props) {
+    return (
         <div id="part2">
             <div id="p2Text"><Nav2 /></div>
             <div id="p2Content">
-                <Box1 />
-                <Box2 />
-                <Box3 />
-                <Box4 />
-                <Box5 />
-                <Box6 />
+                <Box1
+                    uv={props.uv}
+                    label={props.label}
+                />
+                <Box2
+                    speed={props.speed}
+                    gusts={props.gusts}
+                />
+                <Box3
+                    feels={props.feels}
+                    description={props.description}
+                />
+                <Box4
+                    humidity={props.humidity}
+                    dew={props.dew}
+                    slider={props.slider}
+                />
+                <Box5
+                    visibility={props.visibility}
+                    cloud={props.cloud}
+                />
+                <Box6
+                    sunrise={props.sunrise}
+                    sunset={props.sunset}
+                />
             </div>
         </div>
     )

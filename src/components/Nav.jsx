@@ -1,7 +1,7 @@
 import React from "react";
 import LetterAvatars from "./Avatar";
 
-export default function Nav() {
+export default function Nav(props) {
     return (
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
             <div id="nav-content" className="container-fluid">
@@ -13,7 +13,11 @@ export default function Nav() {
                 </button>
                 <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
                     <div className="navbar-nav ms-auto">
-                        <LetterAvatars />
+                        <LetterAvatars 
+                            trueClick={props.trueClick}
+                            falseClick={props.falseClick}
+                            unit={props.unit}
+                        />
                     </div>
                 </div>
             </div>
