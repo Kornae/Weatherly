@@ -12,18 +12,14 @@ export default function Section1() {
     const key = process.env.REACT_APP_API_KEY;
 
     const api = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${search}?unitGroup=us&iconSet=icons2&include=current&key=${key}&contentType=json`;
-    const isInitialMount = useRef(true);
 
     useEffect(() => {
-        if (isInitialMount.current) {
-            isInitialMount.current = false;
-        } else {
             fetch(api)
                 .then((res) => res.json())
                 .then((data) => {
                     setWeatherData(data);
                 });
-        }
+
     }, [search]);
 
 
