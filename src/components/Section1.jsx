@@ -6,13 +6,14 @@ import icons from "./Icons";
 export default function Section1() {
     const [weatherData, setWeatherData] = useState([]);
     const [city, setCity] = useState('');
-    const [search, setSearch] = useState('Chicago');
+    const [search, setSearch] = useState('Los Angeles');
     const [unit, setUnit] = useState(false);
 
     const key = process.env.REACT_APP_API_KEY;
 
     const api = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${search}?unitGroup=us&iconSet=icons2&include=current&key=${key}&contentType=json`;
 
+  
     useEffect(() => {
             fetch(api)
                 .then((res) => res.json())
@@ -53,32 +54,56 @@ export default function Section1() {
 
     if (weatherData.length === 0) {
         return <div id="s1-container">
-            <One
+    
+            <Two
                 change={handleChange}
                 click={handleClick}
                 onKeyDown={handleKeyDown}
                 submit={handleFormSubmit}
-                temp='0'
-                location='Location Unavailable'
-                conditions='No current conditions'
-                rain='0%'
-                day='Today'
-                date='0:00'
-            />
-            <Two
-                uv='0'
-                label='N/A'
-                speed='0'
-                gusts='0'
-                feels='0'
-                description='Description Unavailable'
-                humidity='0'
-                slider='0'
-                dew='0'
-                visibility='0'
-                cloud='0'
-                sunrise='0:00'
-                sunset='0:00'
+                trueClick={handleTrueClick}
+                falseClick={handleFalseClick}
+                // unit={unit}
+                // uv={uv}
+                // label={uvLabel}
+                // speed={Math.round(wind)}
+                // gusts={Math.round(gusts)}
+                // feels={unit ? Math.round(((feels) - 32) * (5 / 9)) : Math.round(feels)}
+                // description={description}
+                // humidity={Math.round(humidity)}
+                // slider={Math.round(humidity)}
+                // dew={Math.round(dew)}
+                // visibility={Math.round(visibility)}
+                // cloud={Math.round(cloud)}
+                // sunrise={formattedSunrise}
+                // sunset={formattedSunset}
+
+                day1='Mon'
+                day2='Tue'
+                day3='Wed'
+                day4='Thu'
+                day5='Fri'
+                day6='Sat'
+
+                dailyImg1={''}
+                dailyImg2={''}
+                dailyImg3={''}
+                dailyImg4={''}
+                dailyImg5={''}
+                dailyImg6={''}
+
+                // temp1={unit ? Math.round(((high1) - 32) * (5 / 9)) : Math.round(high1)}
+                // temp2={unit ? Math.round(((high2) - 32) * (5 / 9)) : Math.round(high2)}
+                // temp3={unit ? Math.round(((high3) - 32) * (5 / 9)) : Math.round(high3)}
+                // temp4={unit ? Math.round(((high4) - 32) * (5 / 9)) : Math.round(high4)}
+                // temp5={unit ? Math.round(((high5) - 32) * (5 / 9)) : Math.round(high5)}
+                // temp6={unit ? Math.round(((high6) - 32) * (5 / 9)) : Math.round(high6)}
+
+                // low1={unit ? Math.round(((low1) - 32) * (5 / 9)) : Math.round(low1)}
+                // low2={unit ? Math.round(((low2) - 32) * (5 / 9)) : Math.round(low2)}
+                // low3={unit ? Math.round(((low3) - 32) * (5 / 9)) : Math.round(low3)}
+                // low4={unit ? Math.round(((low4) - 32) * (5 / 9)) : Math.round(low4)}
+                // low5={unit ? Math.round(((low5) - 32) * (5 / 9)) : Math.round(low5)}
+                // low6={unit ? Math.round(((low6) - 32) * (5 / 9)) : Math.round(low6)}
             />
         </div>
     }

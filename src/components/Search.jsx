@@ -8,7 +8,8 @@ export default function BasicTextFields(props) {
         <Box
             onSubmit={props.submit}
             component="form"
-            sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: 'auto', borderBottom: 'solid .5px #0a0a0a' }}
+            id='searchBox'
+            sx={{ p: '2px 4px', display: 'flex', alignItems: 'center', width: '100%', borderBottom: 'solid .5px #0a0a0a' }}
             noValidate
             autoComplete="off"
         >
