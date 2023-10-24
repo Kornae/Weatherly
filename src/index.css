@@ -11,6 +11,7 @@ body {
 .navbar {
   background-color: transparent !important;
   font-weight: 500;
+        width: 100%;
 }
 
 #nav-content {
@@ -33,7 +34,7 @@ body {
     display: grid;
     grid-template-areas: 'one two';
     grid-template-columns: auto auto;
-    grid-template-rows: 100vh;
+    grid-template-rows: auto;
   }
 }
 
@@ -71,8 +72,8 @@ body {
 
 
     #img-div {
-      max-height: 250px;
-      max-width: 250px;
+      max-height: 180px;
+      max-width: 180px;
       width: auto;
       height: auto;
     }
@@ -157,6 +158,9 @@ body {
 
     #p1Text {
       grid-area: p1Text;
+        display: flex;
+          justify-content: left;
+          align-items: flex-end;
     }
 
     #p1Content {
@@ -230,6 +234,9 @@ body {
 
   #p2Text {
     grid-area: p2Text;
+            display: flex;
+            justify-content: left;
+            align-items: flex-end;
   }
 
   #p2Content {
@@ -515,27 +522,6 @@ body {
     margin: 10px;
     padding: 10px;
   }
-}
-
-@media (min-width: 1200px) {
-#main {
-    display: grid;
-    grid-template-areas: 's1';
-    grid-template-rows: auto;
-    grid-template-columns: 1fr;
-  }
-
-  #s1 {
-    grid-area: s1;
-
-    #s1-container {
-      display: grid;
-      grid-template-areas: 'one two';
-      grid-template-columns: .5fr 2fr;
-      grid-template-rows: 100vh;
-    }
-  }
-
 }
 
 @media (min-width: 1024px) {
