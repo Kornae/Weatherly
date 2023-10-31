@@ -21,8 +21,8 @@ export default function CardVariants(props) {
                         <img id="icon" src={props.dailyImg} alt="icon" />
                     </div>
                     <div style={{display:'flex', justifyContent:'center', alignItems:'center'}}>
-                        <Typography style={{padding:'0px 5px'}}>{props.temp}</Typography>
-                        <Typography style={{ padding: '0px 5px', color:'#a8a8a8', fontWeight: '200'}}>{props.low}</Typography>
+                        <Typography style={{padding:'0px 5px'}}>{props.temp}°</Typography>
+                        <Typography style={{ padding: '0px 5px', color:'#a8a8a8', fontWeight: '200'}}>{props.low}°</Typography>
                     </div>
                 </CardContent>
             </Card>
