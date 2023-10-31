@@ -11,7 +11,7 @@ body {
 .navbar {
   background-color: transparent !important;
   font-weight: 500;
-        width: 100%;
+  width: 100%;
 }
 
 #nav-content {
@@ -50,7 +50,7 @@ body {
     'divider'
     'info';
   grid-template-columns: 1fr;
-  grid-template-rows: auto auto auto .05fr auto;
+  grid-template-rows: .2fr .3fr auto .03fr .15fr auto;
   font-weight: 300;
 
 
@@ -158,9 +158,9 @@ body {
 
     #p1Text {
       grid-area: p1Text;
-        display: flex;
-          justify-content: left;
-          align-items: flex-end;
+      display: flex;
+      justify-content: left;
+      align-items: flex-end;
     }
 
     #p1Content {
@@ -214,7 +214,7 @@ body {
 
     #icon {
       max-width: 50px;
-      max-height: 60px;
+      max-height: 50px;
       padding: 5px;
       width: auto;
       height: auto;
@@ -234,9 +234,9 @@ body {
 
   #p2Text {
     grid-area: p2Text;
-            display: flex;
-            justify-content: left;
-            align-items: flex-end;
+    display: flex;
+    justify-content: left;
+    align-items: flex-end;
   }
 
   #p2Content {
@@ -244,7 +244,7 @@ body {
     display: grid;
     grid-template-areas: 'b1 b2 b3'
       'b4 b5 b6';
-    grid-template-rows: auto auto;
+    grid-template-rows: 1fr 1fr;
     grid-template-columns: 1fr 1fr 1fr;
     padding: 5px 20px;
     margin: 0px 17px;
@@ -258,6 +258,7 @@ body {
     margin: 5px 10px;
     grid-area: highlights;
     color: #a8a8a8;
+    font-size: .9rem;
   }
 
   #box1 {
@@ -529,7 +530,7 @@ body {
   #m-temperature,
   #mobile-temp,
   #mobile-image,
-    #p1-search {
+  #p1-search {
     display: none;
   }
 }
@@ -537,167 +538,167 @@ body {
 
 @media (min-width: 768px) and (max-width: 1023px) {
   #main {
+    display: grid;
+    grid-template-areas: 's1';
+    grid-template-rows: auto;
+    grid-template-columns: 1fr;
+  }
+
+  #s1 {
+    grid-area: s1;
+
+    #s1-container {
       display: grid;
-      grid-template-areas: 's1';
-      grid-template-rows: auto;
-      grid-template-columns: 1fr;
-    }
-  
-    #s1 {
-      grid-area: s1;
-  
-      #s1-container {
-        display: grid;
-        grid-template-areas: 'one'
-          'two';
-        grid-template-columns: 1fr;
-        grid-template-rows: auto auto;
-  
-      }
-    }
-  
-    #one {
-      grid-area: one;
-      background-color: #ffffff;
-      display: grid;
-      grid-template-areas:
-        'weather weather'
-        'location location'
-        'info info';
-      grid-template-columns: 1fr 1fr;
-      grid-template-rows: auto auto auto auto;
-      font-weight: 300;
-    margin: 50px 0px;
-      padding: 15px 0px;
-  
-  
-  
-      #search {
-  
-        display: none;
-      }
-  
-      #main-image {
-        display: none;
-      }
-  
-      #info {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-  
-      #info-text {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-      }
-  
-      #divider {
-        margin: 5px 100px;
-        grid-area: divider;
-        display: none
-      }
-  
-      #weather {
-        margin: 5px 40px;
-        grid-area: weather;
-        text-align: center;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-  
-        #weather-outline {
-          display: grid;
-          grid-template-areas:
-            'date'
-            'place'
-            'tp';
-          grid-template-columns: 1fr;
-          grid-template-rows: auto auto auto;
-        }
-  
-        #m-temperature {
-          font-size: 5.5rem;
-          grid-area: tp;
-        }
-  
-        #temperature {
-          display: none;
-        }
-  
-        #date {
-          font-size: .9rem;
-          grid-area: date;
-        }
-  
-        #place {
-          margin: 0px 20px 20px;
-          padding: 0px 20px 0px;
-          font-size: 1.5rem;
-          grid-area: place;
-        }
-  
-        #country {
-          font-size: .9rem;
-        }
-      }
-    }
-  
-  
-    #two {
-      grid-area: two;
-      display: grid;
-      grid-template-areas: 'part1'
-        'part2';
+      grid-template-areas: 'one'
+        'two';
       grid-template-columns: 1fr;
       grid-template-rows: auto auto;
-  
-  
-      #part1 {
-        grid-area: part1;
-        background-color: #f6f7f8;
+
+    }
+  }
+
+  #one {
+    grid-area: one;
+    background-color: #ffffff;
+    display: grid;
+    grid-template-areas:
+      'weather weather'
+      'location location'
+      'info info';
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto auto auto auto;
+    font-weight: 300;
+    margin: 50px 0px;
+    padding: 15px 0px;
+
+
+
+    #search {
+
+      display: none;
+    }
+
+    #main-image {
+      display: none;
+    }
+
+    #info {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    #info-text {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    #divider {
+      margin: 5px 100px;
+      grid-area: divider;
+      display: none
+    }
+
+    #weather {
+      margin: 5px 40px;
+      grid-area: weather;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      #weather-outline {
         display: grid;
-        grid: 'p1Search'
-          'p1Text'
-          'p1Content';
+        grid-template-areas:
+          'date'
+          'place'
+          'tp';
         grid-template-columns: 1fr;
         grid-template-rows: auto auto auto;
-        border-radius: 35px 35px 0px 0px;
-        padding: 30px 0px 5px;
-  
-  
-        #p1-search {
-          grid-area: p1Search;
-          padding: 5px 20px;
-          margin: 0px 17px;
-        }
-  
-        #p1Content {
-          grid-area: p1Content;
-          display: grid;
-          grid-template-areas: 'c1 c2 c3'
-            'c4 c5 c6';
-          grid-template-columns: 1fr 1fr 1fr;
-          grid-template-rows: auto auto;
-          padding: 5px 20px;
-          margin: 0px 17px;
-        }
       }
-  
-      #p2Content {
-        grid-area: p2Content;
-        display: grid;
-        grid-template-areas: 'b1 b2'
-          'b3 b4'
-          'b5 b6';
-        grid-template-rows: auto auto auto;
-        grid-template-columns: 1fr 1fr;
-        padding: 5px 20px 20px;
-        margin: 10px 17px 20px;
+
+      #m-temperature {
+        font-size: 5.5rem;
+        grid-area: tp;
+      }
+
+      #temperature {
+        display: none;
+      }
+
+      #date {
+        font-size: .9rem;
+        grid-area: date;
+      }
+
+      #place {
+        margin: 0px 20px 20px;
+        padding: 0px 20px 0px;
+        font-size: 1.5rem;
+        grid-area: place;
+      }
+
+      #country {
+        font-size: .9rem;
       }
     }
+  }
+
+
+  #two {
+    grid-area: two;
+    display: grid;
+    grid-template-areas: 'part1'
+      'part2';
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto;
+
+
+    #part1 {
+      grid-area: part1;
+      background-color: #f6f7f8;
+      display: grid;
+      grid: 'p1Search'
+        'p1Text'
+        'p1Content';
+      grid-template-columns: 1fr;
+      grid-template-rows: auto auto auto;
+      border-radius: 35px 35px 0px 0px;
+      padding: 30px 0px 5px;
+
+
+      #p1-search {
+        grid-area: p1Search;
+        padding: 5px 20px;
+        margin: 0px 17px;
+      }
+
+      #p1Content {
+        grid-area: p1Content;
+        display: grid;
+        grid-template-areas: 'c1 c2 c3'
+          'c4 c5 c6';
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: auto auto;
+        padding: 5px 20px;
+        margin: 0px 17px;
+      }
+    }
+
+    #p2Content {
+      grid-area: p2Content;
+      display: grid;
+      grid-template-areas: 'b1 b2'
+        'b3 b4'
+        'b5 b6';
+      grid-template-rows: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+      padding: 5px 20px 20px;
+      margin: 10px 17px 20px;
+    }
+  }
 }
 
 @media (max-width: 767px) {
@@ -781,7 +782,7 @@ body {
           'place'
           'tp';
         grid-template-columns: 1fr;
-        grid-template-rows: auto auto auto; 
+        grid-template-rows: auto auto auto;
       }
 
       #m-temperature {
@@ -836,8 +837,8 @@ body {
 
       #p1-search {
         grid-area: p1Search;
-                padding: 5px 20px;
-                  margin: 0px 17px;
+        padding: 5px 20px;
+        margin: 0px 17px;
       }
 
       #p1Content {
@@ -861,7 +862,7 @@ body {
         'b4'
         'b5'
         'b6';
-      grid-template-rows: auto auto auto auto auto auto;
+      grid-template-rows: 1fr 1fr 1fr 1fr 1fr 1fr;
       grid-template-columns: 1fr;
       padding: 5px 20px 20px;
       margin: 10px 17px 20px;

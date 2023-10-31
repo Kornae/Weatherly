@@ -62,21 +62,7 @@ export default function Section1() {
                 submit={handleFormSubmit}
                 trueClick={handleTrueClick}
                 falseClick={handleFalseClick}
-                // unit={unit}
-                // uv={uv}
-                // label={uvLabel}
-                // speed={Math.round(wind)}
-                // gusts={Math.round(gusts)}
-                // feels={unit ? Math.round(((feels) - 32) * (5 / 9)) : Math.round(feels)}
-                // description={description}
-                // humidity={Math.round(humidity)}
-                // slider={Math.round(humidity)}
-                // dew={Math.round(dew)}
-                // visibility={Math.round(visibility)}
-                // cloud={Math.round(cloud)}
-                // sunrise={formattedSunrise}
-                // sunset={formattedSunset}
-
+                
                 day1='Mon'
                 day2='Tue'
                 day3='Wed'
@@ -90,20 +76,6 @@ export default function Section1() {
                 dailyImg4={''}
                 dailyImg5={''}
                 dailyImg6={''}
-
-                // temp1={unit ? Math.round(((high1) - 32) * (5 / 9)) : Math.round(high1)}
-                // temp2={unit ? Math.round(((high2) - 32) * (5 / 9)) : Math.round(high2)}
-                // temp3={unit ? Math.round(((high3) - 32) * (5 / 9)) : Math.round(high3)}
-                // temp4={unit ? Math.round(((high4) - 32) * (5 / 9)) : Math.round(high4)}
-                // temp5={unit ? Math.round(((high5) - 32) * (5 / 9)) : Math.round(high5)}
-                // temp6={unit ? Math.round(((high6) - 32) * (5 / 9)) : Math.round(high6)}
-
-                // low1={unit ? Math.round(((low1) - 32) * (5 / 9)) : Math.round(low1)}
-                // low2={unit ? Math.round(((low2) - 32) * (5 / 9)) : Math.round(low2)}
-                // low3={unit ? Math.round(((low3) - 32) * (5 / 9)) : Math.round(low3)}
-                // low4={unit ? Math.round(((low4) - 32) * (5 / 9)) : Math.round(low4)}
-                // low5={unit ? Math.round(((low5) - 32) * (5 / 9)) : Math.round(low5)}
-                // low6={unit ? Math.round(((low6) - 32) * (5 / 9)) : Math.round(low6)}
             />
         </div>
     }
