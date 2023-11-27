@@ -11,6 +11,7 @@ export default function Section1() {
 
     const key = process.env.REACT_APP_API_KEY;
 
+
     const api = `https://weather.visualcrossing.com/VisualCrossingWebServices/rest/services/timeline/${search}?unitGroup=us&iconSet=icons2&include=current&key=${key}&contentType=json`;
 
   
@@ -31,6 +32,7 @@ export default function Section1() {
 
     let handleClick = () => {
         setSearch(city)
+        // alert('Searched')
     }
 
     function handleTrueClick() {

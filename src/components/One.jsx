@@ -1,16 +1,17 @@
 import React from "react";
-import BasicTextFields from "./Search";
+import AutocompleteIntroduction from "../AutoComplete";
 import Divider from '@mui/material/Divider';
 
 export default function One(props) {
     return (
         <div id="one">
-            <div id="search"> <BasicTextFields 
-                change={props.change}
-                click={props.click}
-                onKeyDown={props.onKeyDown}
-                submit={props.submit}
-            /> </div>
+            <div id="search">
+                <AutocompleteIntroduction
+                    change={props.change}
+                    click={props.click}
+                    onKeyDown={props.onKeyDown}
+                    submit={props.submit}
+                /> </div>
             <div id="main-image">
                 <img id="img-div" alt="icon" src={props.mainImg} />
             </div>
@@ -29,7 +30,7 @@ export default function One(props) {
             <div id="divider"><Divider /></div>
             <div id="info">
                 <div>
-    
+
                     <p id="info-text"><span className="material-symbols-outlined" style={{ color: '#424242', marginRight: '6px' }}>weather_mix</span>{props.conditions}</p>
                     <p id="info-text"><span style={{ color: '#92BAD2', marginRight: '6px' }} class="material-symbols-outlined">
                         rainy_light

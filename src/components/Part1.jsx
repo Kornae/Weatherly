@@ -1,13 +1,13 @@
 import React from "react";
 import Nav from "./Nav";
 import CardVariants from "./Card";
-import BasicTextFields from "./Search";
+import AutocompleteIntroduction from "../AutoComplete";
 
 export default function Part1(props) {
     return (
         <div id="part1">
             <div id="p1-search">
-                <BasicTextFields 
+                <AutocompleteIntroduction 
                     change={props.change}
                     click={props.click}
                     onKeyDown={props.onKeyDown}
